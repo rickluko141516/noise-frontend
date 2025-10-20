@@ -1,5 +1,5 @@
 // ===== CONFIGURAÇÕES GLOBAIS =====
-const API_URL = 'https://seu-backend-noise.onrender.com/api';
+const API_URL = 'https://noise-backend-t16t.onrender.com/api';
 let paginaAtual = 'index';
 
 // ===== INICIALIZAÇÃO =====
@@ -342,4 +342,5 @@ function mostrarLoading(elemento) {
 
 function esconderLoading(elemento, conteudo) {
     elemento.innerHTML = conteudo;
+
 }
