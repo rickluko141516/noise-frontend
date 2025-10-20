@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noise Maps - Nossos Lugares</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animacoes.css">
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+<body>
+    <div class="heart-background"></div>
+    
+    <header class="romantic-header">
+        <h1 class="title-glitter">Noise Maps 🗺️</h1>
+        <p class="subtitle">Nossa jornada pelo mundo</p>
+    </header>
+
+    <nav class="love-nav">
+        <button class="nav-btn" onclick="window.location.href='index.html'">🏠 Home</button>
+        <button class="nav-btn" onclick="window.location.href='mural-fotos.html'">🖼️ Mural</button>
+        <button class="nav-btn" onclick="window.location.href='jogos-interativos.html'">🎮 Jogos</button>
+        <button class="nav-btn" onclick="window.location.href='metas-casais.html'">🎯 Metas</button>
+        <button class="nav-btn active" onclick="window.location.href='mapa-amor.html'">🗺️ Mapa</button>
+        <button class="nav-btn" onclick="window.location.href='mensagens.html'">💌 Mensagens</button>
+    </nav>
+
+    <main class="mapa-container">
+        <div class="cidade-info">
+            <div class="cidade">
+                <h3>🏡 Sua Cidade</h3>
+                <p>São Paulo - SP</p>
+            </div>
+            <div class="distancias">
+                <h3>📏 Distância</h3>
+                <div class="numero-distancia">0 km</div>
+                <p>Bem pertinho! 💖</p>
+            </div>
+            <div class="cidade">
+                <h3>🏡 Minha Cidade</h3>
+                <p>São Paulo - SP</p>
+            </div>
+        </div>
+
+        <div class="mapa-simplificado">
+            <h3 class="text-center">📍 Nossos Lugares Especiais</h3>
+            <div class="lugares-list" style="display: grid; gap: 1rem; margin-top: 2rem;">
+                <div class="lugar-card" style="background: var(--branco); padding: 1.5rem; border-radius: 15px; box-shadow: var(--sombra);">
+                    <h4>💕 Nosso Primeiro Encontro</h4>
+                    <p>Parque Ibirapuera - Onde tudo começou</p>
+                    <small>⭐ 5/5 - Momento mágico</small>
+                </div>
+                
+                <div class="lugar-card" style="background: var(--branco); padding: 1.5rem; border-radius: 15px; box-shadow: var(--sombra);">
+                    <h4>🍽️ Restaurante Favorito</h4>
+                    <p>La Tambouille - Jantares especiais</p>
+                    <small>🎉 12 visitas - Nosso lugar</small>
+                </div>
+                
+                <div class="lugar-card" style="background: var(--branco); padding: 1.5rem; border-radius: 15px; box-shadow: var(--sombra);">
+                    <h4>🌅 Mirante do Pôr do Sol</h4>
+                    <p>Mirante 9 de Julho - Nossos finais de tarde</p>
+                    <small>✨ 8 visitas - Vista incrível</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="contador-visitas">
+            <h3 class="text-center">📊 Nossas Estatísticas</h3>
+            <div class="visitas-stats">
+                <div class="stat-card">
+                    <h4>Lugares Visitados</h4>
+                    <span>24</span>
+                </div>
+                <div class="stat-card">
+                    <h4>Jantares Românticos</h4>
+                    <span>45</span>
+                </div>
+                <div class="stat-card">
+                    <h4>Passeios no Parque</h4>
+                    <span>32</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="proxima-visita">
+            <h3 class="text-center">🎯 Próxima Aventura</h3>
+            <div class="text-center" style="margin-top: 1rem;">
+                <h4>🏖️ Praia do Sonho</h4>
+                <p>Final de semana romântico na praia - Previsto para Dezembro</p>
+                <button>➕ Planejar Detalhes</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="love-footer">
+        <p>Explorando o mundo juntos! 🌎💫</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="mapa.js"></script>
+</body>
+</html>

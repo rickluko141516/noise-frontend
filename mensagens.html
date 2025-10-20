@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens - Nosso Diário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animacoes.css">
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+<body>
+    <div class="heart-background"></div>
+    
+    <header class="romantic-header">
+        <h1 class="title-glitter">Mensagens 💌</h1>
+        <p class="subtitle">Nosso diário de amor</p>
+    </header>
+
+    <nav class="love-nav">
+        <button class="nav-btn" onclick="window.location.href='index.html'">🏠 Home</button>
+        <button class="nav-btn" onclick="window.location.href='mural-fotos.html'">🖼️ Mural</button>
+        <button class="nav-btn" onclick="window.location.href='jogos-interativos.html'">🎮 Jogos</button>
+        <button class="nav-btn" onclick="window.location.href='metas-casais.html'">🎯 Metas</button>
+        <button class="nav-btn" onclick="window.location.href='mapa-amor.html'">🗺️ Mapa</button>
+        <button class="nav-btn active" onclick="window.location.href='mensagens.html'">💌 Mensagens</button>
+    </nav>
+
+    <main class="mensagens-container">
+        <div class="nova-mensagem">
+            <h3>✍️ Escrever Nova Mensagem</h3>
+            <textarea id="texto-mensagem" placeholder="💭 Digite sua mensagem especial..."></textarea>
+            <select id="tipo-mensagem">
+                <option value="amor">💕 Mensagem de Amor</option>
+                <option value="saudade">🌙 Mensagem de Saudade</option>
+                <option value="motivacao">✨ Mensagem de Motivação</option>
+                <option value="surpresa">🎁 Mensagem Surpresa</option>
+            </select>
+            <select id="destinatario">
+                <option value="voce">👉 Para Você</option>
+                <option value="amor">👈 Para Meu Amor</option>
+            </select>
+            <button onclick="enviarMensagem()">🚀 Enviar Mensagem</button>
+        </div>
+
+        <div class="carrossel-mensagens">
+            <div class="mensagem-destaque amor">
+                <h4>💖 Te amo mais que tudo!</h4>
+                <p>Cada dia ao seu lado é um presente. Você é a pessoa mais incrível que já conheci...</p>
+                <small>👈 De: Meu Amor - Hoje</small>
+            </div>
+            
+            <div class="mensagem-destaque saudade">
+                <h4>🌙 Saudades...</h4>
+                <p>Mesmo quando estamos juntos, já sinto saudades de você. Você é meu porto seguro...</p>
+                <small>👉 De: Você - Ontem</small>
+            </div>
+            
+            <div class="mensagem-destaque motivacao">
+                <h4>✨ Você consegue!</h4>
+                <p>Estou tão orgulhoso de você! Continue assim, você é mais forte do que imagina...</p>
+                <small>👈 De: Meu Amor - 2 dias atrás</small>
+            </div>
+        </div>
+
+        <div class="lista-mensagens">
+            <div class="mensagem-item amor">
+                <div class="meta-header">
+                    <h4>💕 Minha Razão de Viver</h4>
+                    <span>👈 Meu Amor - 20/10/2024</span>
+                </div>
+                <p>Você chegou na minha vida e tudo fez sentido. Cada sorriso seu ilumina meu dia, cada abraço seu é meu lugar favorito no mundo. Te amo além das palavras.</p>
+            </div>
+
+            <div class="mensagem-item saudade">
+                <div class="meta-header">
+                    <h4>🌙 Pensando em Você</h4>
+                    <span>👉 Você - 19/10/2024</span>
+                </div>
+                <p>Mesmo na correria do dia, você está em todos os meus pensamentos. Mal posso esperar para te ver e te contar sobre meu dia. Saudades do seu cheiro, do seu abraço...</p>
+            </div>
+
+            <div class="mensagem-item motivacao">
+                <div class="meta-header">
+                    <h4>🚀 Você é Incrível!</h4>
+                    <span>👈 Meu Amor - 18/10/2024</span>
+                </div>
+                <p>Quero que saiba o quanto admiro sua força e determinação. Você está conquistando coisas incríveis e estou aqui para te apoiar em cada passo. Juntos somos invencíveis!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="love-footer">
+        <p>Nosso amor em palavras eternas 📝💖</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="mensagens.js"></script>
+</body>
+</html>

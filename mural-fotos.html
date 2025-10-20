@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noise Mural - Nossas Fotos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animacoes.css">
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+<body>
+    <div class="heart-background"></div>
+    
+    <header class="romantic-header">
+        <h1 class="title-glitter">Noise Mural 📸</h1>
+        <p class="subtitle">Nossas memórias em fotos</p>
+    </header>
+
+    <nav class="love-nav">
+        <button class="nav-btn" onclick="window.location.href='index.html'">🏠 Home</button>
+        <button class="nav-btn active" onclick="window.location.href='mural-fotos.html'">🖼️ Mural</button>
+        <button class="nav-btn" onclick="window.location.href='jogos-interativos.html'">🎮 Jogos</button>
+        <button class="nav-btn" onclick="window.location.href='metas-casais.html'">🎯 Metas</button>
+        <button class="nav-btn" onclick="window.location.href='mapa-amor.html'">🗺️ Mapa</button>
+        <button class="nav-btn" onclick="window.location.href='mensagens.html'">💌 Mensagens</button>
+    </nav>
+
+    <main class="mural-container">
+        <div class="upload-area">
+            <h3>➕ Adicionar Nova Foto</h3>
+            <p>Compartilhe um momento especial</p>
+            <div class="upload-btn" onclick="document.getElementById('file-input').click()">
+                📸 Escolher Foto
+            </div>
+            <input type="file" id="file-input" accept="image/*" style="display: none;">
+        </div>
+
+        <div class="filtros-fotos">
+            <button class="filtro-btn active">Todas</button>
+            <button class="filtro-btn">💕 Românticas</button>
+            <button class="filtro-btn">🎉 Comemorações</button>
+            <button class="filtro-btn">✈️ Viagens</button>
+            <button class="filtro-btn">🍽️ Jantares</button>
+        </div>
+
+        <div class="galeria-fotos">
+            <div class="foto-item">
+                <div style="background: var(--rosa-claro); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">📸</div>
+                <div class="foto-info">
+                    <h4>Nosso primeiro encontro</h4>
+                    <p>15/03/2024 - Onde tudo começou 💖</p>
+                </div>
+            </div>
+            
+            <div class="foto-item">
+                <div style="background: var(--azul-claro); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🌅</div>
+                <div class="foto-info">
+                    <h4>Pôr do sol no parque</h4>
+                    <p>22/06/2024 - Momentos de paz ✨</p>
+                </div>
+            </div>
+            
+            <div class="foto-item">
+                <div style="background: var(--verde); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎂</div>
+                <div class="foto-info">
+                    <h4>Aniversário especial</h4>
+                    <p>10/08/2024 - Comemoração 🎉</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-foto" id="modal-foto">
+        <span class="fechar-modal">&times;</span>
+        <img id="foto-ampliada" src="" alt="">
+        <div class="info-foto">
+            <h3 id="titulo-foto"></h3>
+            <p id="descricao-foto"></p>
+        </div>
+    </div>
+
+    <footer class="love-footer">
+        <p>Nossas memórias valiosas 💖</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="mural.js"></script>
+</body>
+</html>

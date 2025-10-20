@@ -1,0 +1,639 @@
+/* ===== VARIÁVEIS E RESET ===== */
+:root {
+    --rosa-principal: #ff6b8b;
+    --rosa-claro: #ffb6c1;
+    --rosa-escuro: #d94d6a;
+    --roxo: #c47ac0;
+    --azul-claro: #a2d2ff;
+    --azul-escuro: #5d7af2;
+    --verde: #7ae7a5;
+    --amarelo: #ffd166;
+    --branco: #ffffff;
+    --preto: #333333;
+    --cinza-claro: #f8f9fa;
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --sombra-forte: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --gradiente-romantico: linear-gradient(135deg, #ff6b8b, #c47ac0, #5d7af2);
+    --gradiente-suave: linear-gradient(135deg, #ffb6c1, #a2d2ff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--gradiente-suave);
+    min-height: 100vh;
+    color: var(--preto);
+    overflow-x: hidden;
+}
+
+/* ===== FUNDO COM CORAÇÕES ===== */
+.heart-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 20% 80%, var(--rosa-claro) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, var(--azul-claro) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, var(--roxo) 0%, transparent 50%);
+    animation: backgroundFloat 20s ease-in-out infinite;
+}
+
+/* ===== HEADER ROMÂNTICO ===== */
+.romantic-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--gradiente-romantico);
+    color: var(--branco);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.romantic-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="50">💕</text></svg>');
+    opacity: 0.1;
+    animation: floatHearts 20s linear infinite;
+}
+
+.title-glitter {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #ffd700, #ff6b8b, #c47ac0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glitter 2s ease-in-out infinite;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* ===== NAVEGAÇÃO ===== */
+.love-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-btn {
+    background: var(--branco);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--rosa-escuro);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--sombra);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-forte);
+    background: var(--rosa-principal);
+    color: var(--branco);
+}
+
+/* ===== SEÇÃO PRINCIPAL ===== */
+.love-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.welcome-section {
+    background: var(--branco);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+/* ===== AVATARES DO CASAL ===== */
+.couple-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+.avatar.voce {
+    background: var(--azul-claro);
+}
+
+.avatar.ela {
+    background: var(--rosa-claro);
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+.heart-connector {
+    font-size: 2rem;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* ===== CONTADOR DE TEMPO ===== */
+.love-counter {
+    margin-bottom: 2rem;
+}
+
+.counter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--rosa-principal);
+    margin-top: 0.5rem;
+}
+
+/* ===== ACESSO RÁPIDO ===== */
+.quick-access {
+    margin-top: 2rem;
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.quick-card {
+    background: var(--branco);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--sombra);
+    border: 2px solid transparent;
+}
+
+.quick-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-forte);
+    border-color: var(--rosa-principal);
+}
+
+.quick-card span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== FOOTER ===== */
+.love-footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    background: var(--gradiente-romantico);
+    color: var(--branco);
+}
+
+.secret-code {
+    margin-top: 1rem;
+    opacity: 0.7;
+}
+
+/* ===== CONTAINERS DAS PÁGINAS ===== */
+.mural-container,
+.jogos-container,
+.metas-container,
+.mapa-container,
+.mensagens-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ===== GALERIA DE FOTOS ===== */
+.filtros-fotos {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filtro-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--rosa-principal);
+    background: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtro-btn.active,
+.filtro-btn:hover {
+    background: var(--rosa-principal);
+    color: var(--branco);
+}
+
+.upload-area {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: 2px dashed var(--rosa-claro);
+    border-radius: 15px;
+    background: var(--branco);
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--rosa-principal);
+    color: var(--branco);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: var(--rosa-escuro);
+    transform: scale(1.05);
+}
+
+.galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.foto-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.foto-item:hover {
+    transform: scale(1.05);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.foto-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: var(--branco);
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.foto-item:hover .foto-info {
+    transform: translateY(0);
+}
+
+/* ===== MODAL ===== */
+.modal-foto {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.modal-foto.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: var(--branco);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#foto-ampliada {
+    max-width: 90%;
+    max-height: 70vh;
+    border-radius: 15px;
+}
+
+.info-foto {
+    color: var(--branco);
+    text-align: center;
+    margin-top: 1rem;
+    max-width: 600px;
+}
+
+/* ===== JOGOS ===== */
+.jogos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.jogo-card {
+    background: var(--branco);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--sombra);
+    border: 3px solid transparent;
+}
+
+.jogo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-forte);
+    border-color: var(--rosa-principal);
+}
+
+.jogo-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.area-jogo {
+    background: var(--branco);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--sombra);
+    min-height: 400px;
+}
+
+/* ===== METAS ===== */
+.nova-meta {
+    background: var(--branco);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+}
+
+.nova-meta input,
+.nova-meta textarea,
+.nova-meta select {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--cinza-claro);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.nova-meta textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.lista-metas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.meta-item {
+    background: var(--branco);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+    border-left: 5px solid var(--rosa-principal);
+}
+
+.meta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.meta-acoes {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.estatisticas-metas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: var(--branco);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.stat-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--rosa-principal);
+}
+
+.stat-card span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--roxo);
+}
+
+/* ===== MAPA ===== */
+.mapa-simplificado {
+    background: var(--branco);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--sombra);
+}
+
+.mapa-svg {
+    width: 100%;
+    height: 400px;
+}
+
+.cidade-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--branco);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+}
+
+.cidade {
+    text-align: center;
+    flex: 1;
+}
+
+.distancias {
+    text-align: center;
+    flex: 1;
+}
+
+.numero-distancia {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--rosa-principal);
+}
+
+.contador-visitas,
+.proxima-visita {
+    background: var(--branco);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+}
+
+.visitas-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+/* ===== MENSAGENS ===== */
+.nova-mensagem {
+    background: var(--branco);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+}
+
+#texto-mensagem {
+    width: 100%;
+    height: 120px;
+    padding: 1rem;
+    border: 2px solid var(--cinza-claro);
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.lista-mensagens {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mensagem-item {
+    background: var(--branco);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+    border-left: 5px solid;
+}
+
+.mensagem-item.amor { border-left-color: #ff6b8b; }
+.mensagem-item.saudade { border-left-color: #5d7af2; }
+.mensagem-item.motivacao { border-left-color: #7ae7a5; }
+.mensagem-item.surpresa { border-left-color: #ffd166; }
+
+.carrossel-mensagens {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.mensagem-destaque {
+    min-width: 300px;
+    background: var(--branco);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+}
+
+/* ===== BOTÕES ===== */
+button {
+    background: var(--rosa-principal);
+    color: var(--branco);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background: var(--rosa-escuro);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra);
+}
+
+button:disabled {
+    background: var(--cinza-claro);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ===== UTILITÁRIOS ===== */
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
+.p-2 { padding: 2rem; }
